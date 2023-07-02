@@ -1,0 +1,23 @@
+body{
+    background: #1b1c20;
+    font-family: 'Red Hat Display', sans-serif;    
+    -webkit-font-smoothing: antialiased;
+    color:#888;    
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+section{
+    font-size: 28px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    color: #F2F1EB;
+}
+.fa{
+    vertical-align: middle;
+    margin-right: 0.3rem;
+}
