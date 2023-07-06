@@ -6,7 +6,7 @@ footer a{
 }
 .footer-contact{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     margin: 0 5rem;   
 }
 
