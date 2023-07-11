@@ -4,34 +4,48 @@ footer{
 footer a{
     color: #888;
 }
-.footer-contact{
-    display: flex;
-    justify-content:space-evenly;
-    margin: 0 5rem;   
-}
 
 .contact{
-    list-style: none;
-    display: flex;
+    list-style: none;    
     padding-left: 0;    
 }
 
 .contact li{   
-    font-size: 22px;
-    margin-right: 7rem;
-}
-
-footer .social{
-    margin-top: 0rem;
-    margin-left: 4rem;
+    font-size: 22px; 
+    padding: 1rem 0;   
 
 }
+
 .contact li a:hover,
 .contact li a:active
 {
-    color:#9b273a;
+    color:var(--cl-red);
     transition: color 0.5s;
 
 }
+
+.social{    
+    display: flex;
+    padding-left: 0px;
+    gap: 1rem;
+}
+
+.social a{
+    text-decoration: none;    
+    color: #888;
+}
+.social li{
+    list-style: none; 
+    
+   
+}
+.social-icon .fa{
+    font-size: 24px;
+}
+.social-icon .fa:hover{
+    color: var(--cl-red);
+    transition: color 0.5s;
+}
+
 
 

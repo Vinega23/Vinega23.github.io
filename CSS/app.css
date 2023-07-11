@@ -1,23 +1,83 @@
+:root{
+    --bg-main: #1b1c20;
+    --cl-yellow: #ce9700;
+    --cl-red: #9b273a;
+    --cl-white: #F2F1EB;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+}
+html {
+    font-size: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
 body{
-    background: #1b1c20;
-    font-family: 'Red Hat Display', sans-serif;    
-    -webkit-font-smoothing: antialiased;
+    background: var(--bg-main);
+    font-family: 'Red Hat Display', sans-serif;  
     color:#888;    
+
+    margin: 0;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
 }
 a{
     text-decoration: none;
 }
+
 li{
     list-style: none;
 }
+
 section{
     font-size: 28px;
 }
 h1{
     font-family: 'Poppins', sans-serif;
-    color: #F2F1EB;
+    color: var(--cl-white);    
+    font-size: 2.4rem;    
+    
+}
+p{
+    letter-spacing: 0.03rem;
+    line-height: 2rem;
 }
 .fa{
     vertical-align: middle;
     margin-right: 0.3rem;
+}
+.container{
+    padding: 0 1.25rem;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.menu{
+    margin: 0 auto;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+}
+strong{
+    color: var(--cl-white);
 }
