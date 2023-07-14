@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 header{
-    min-height: 80vh;
+    min-height: 90vh;
     background-image: linear-gradient(180deg, rgba(14,1,1,0) 85%, rgba(27,28,32,1) 99%),url(../images/whaleFrontPageBackground.jpg);
     background-repeat: no-repeat;
     background-position: 32% 50%;
@@ -13,7 +13,7 @@ header{
 .dyazart-title {
     color: #e4e3e3;
     font-family: 'Poppins', sans-serif;
-    font-size: 62px;    
+    font-size: clamp(4rem, 12vw, 8rem);    
     position: relative;    
     top: 2rem;
 }
@@ -26,12 +26,16 @@ header{
     color: var(--cl-yellow);
 }
 .red-logo{
-    background: url(../IMAGES/logo-red.png), center center no-repeat;
-    height: 60px;
-    width: 53px;   
-    display: none;
+  background: url(../IMAGES/logo-red.png), center center no-repeat;
+  height: 60px;
+  width: 53px; 
+  z-index: 1;
    
-}   
+}
+.red-logo a{
+  text-indent: -9999px;
+}
+
 /*NAVIGATION*/
 .main-nav {
     width: 100vw;
@@ -42,25 +46,46 @@ header{
     left: 0px;
     top: 0px;
 }
-
-.main-nav .menu{
-      
-    font-size: clamp(1.35rem, 6vw, 2.75rem);
-    line-height: 1;
-
-    display: flex;
-    gap: clamp(0.85rem, 4vw, 2rem);
-
-    padding-left: 0px;
-
-    justify-content: center;
+.wrapped-nav{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;  
+  padding: 1rem 0;
 
 }
 
+.menu
+{
+  position: absolute;
+    width: 100vw;
+    margin: -4rem 0 0 -1.3rem;
+    padding: 6rem 3rem 1rem 3rem; 
+
+    background: var(--bg-main);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);    
+    line-height: 1;  
+
+}
+
+.menu li{
+  line-height: 2;
+  font-size: clamp(1.35rem, 6vw, 2.75rem);
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.menu li:first-child{
+  border-top: 1px solid;
+}
+
+
 .main-nav a{
     display: block;
-    padding-top: 0.7rem;
-    padding-bottom: 0.35rem;
+    padding: 0.35rem 0;
 
     color: var(--cl-white);    
     text-transform: uppercase;
@@ -69,20 +94,123 @@ header{
 }
 .main-nav a:hover,
 .main-nav a:focus{
+    color: var(--cl-yellow);}
+
+.menu .social{
+  justify-content: center;
+  display: flex;
+  padding-left: 0px;
+  gap: 3rem;
+  align-items: baseline;
+
+  padding-top: 1rem;
+}
+
+.menu .social li{
+  border: none;
+}
+
+.menu .social li:first-child{
+  border: none;
+}    
+
+/*HAMBURGER*/
+#menuToggle
+{
+  display: block;  
+  z-index: 1;  
+  -webkit-user-select: none;
+  user-select: none; 
+  padding: 1rem 0 0.6rem 0;
+}
+
+#menuToggle a
+{
+  color: var(--cl-white);    
+    text-transform: uppercase;
+    transition: color 0.5s;  
+    font-size: medium;
+}
+
+#menuToggle a:hover,
+#menuToggle a:focus{
     color: var(--cl-yellow);
 }
 
-.main-nav li{
-    display: flex;
-    align-items: center;
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
 }
-.main-nav li:first-of-type {
-    display: none;
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: var(--cl-white);
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #53aedd;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
 
 /*RESPONSIVE*/
 
-@media screen and (min-width: 360px){
+/* @media screen and (min-width: 360px){
     .red-logo{
         display: block;
     }
@@ -91,4 +219,4 @@ header{
         margin-right: auto;
     }
 
-}
+} */

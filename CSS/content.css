@@ -48,7 +48,7 @@ main{
     margin: 4rem 0;
 }
 .content{
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 1rem 0rem;
 }
 
 .art img{        
@@ -107,6 +107,9 @@ small i{
     background-repeat: no-repeat;
     background-size: 50% 4px, 50% 4px, calc(100% - 8px) 100%;
     background-position: left bottom, left top, 4px 4px;  
+}
+.box-left .content{
+    padding-left: 1rem;
 }
 /*responsive*/
 
