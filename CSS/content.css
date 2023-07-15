@@ -3,23 +3,6 @@ main{
     padding: 4rem 0;
     position: relative;
 }
-.logo-face{
-    position: fixed;
-    bottom: 5rem;
-    right: 1rem;
-    background: #53aedd;
-    height: 85px;
-    width: 85px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    box-shadow: 0 0 5px 0 #53aedd;
-    z-index: 1;
-}
-.logo-face img{
-    position: relative;
-    left: 11px;
-    top: 4px;    
-}
 
 /*SECTIONS*/
 
@@ -45,8 +28,14 @@ main{
 /*CONTENT*/
 
 .art{
-    margin: 4rem 0;
+
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10vh;  
+   
 }
+
 .content{
     padding: 1rem 1rem 1rem 0rem;
 }
@@ -83,10 +72,9 @@ main{
     padding: 3rem 4rem 3rem 0;
 }
 
-.box-image small{
+small{
     position: relative;
-    top: -5.8rem;
-    right: 0.4rem;
+    top: -2.8rem;    
     text-transform: uppercase;
 
     font-size: 1rem;
@@ -94,7 +82,7 @@ main{
 }
 
 small i{
-    vertical-align: middle;
+    
     margin-right: 10px;
     margin-left: 5px; 
 }
@@ -113,23 +101,24 @@ small i{
 }
 /*responsive*/
 
-/* @media screen and (min-width: 810px) {
-    .main{
+@media screen and (min-width: 810px) {
+    .main{        
         padding: 10rem 0;
     }
     
     .art{
+
         display: flex;
         align-items: center;
         gap: 3vw;
 
         margin-bottom: 10rem;
-        padding: 1rem 0;
+        padding: 1rem 0; 
 
-        border-right: 0.75rem solid var(--cl-accent) ;
     }
 
     .art:nth-child(even){
+
         flex-direction: row-reverse;        
         border-right: none;
 
@@ -159,9 +148,9 @@ small i{
         margin-right: 3.5rem;        
         position: relative;
         bottom: 2rem;
-    } */
-   
+    }
+}   
 
    
 
-/* } */
+
