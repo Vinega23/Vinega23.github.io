@@ -1,23 +1,24 @@
 footer{  
-    border-top: 2px solid;  
+    border-top: 2px solid;     
 }
 footer a{
     color: #888;
 }
-.footer-contact{
-    text-align: center;
-    margin-top: 5rem;
-}
 
 .contact{
     list-style: none;    
-    padding-left: 0;    
+    padding-left: 0;
+    text-align: center;    
 }
 
 .contact li{   
-    font-size: 22px; 
+    font-size: 1.7rem; 
     padding: 1rem 0;   
 
+}
+
+.contact h1{
+    margin: 0;
 }
 
 .contact li a:hover,
@@ -28,39 +29,67 @@ footer a{
 
 }
 
-.social{    
-    display: flex;
-    padding-left: 0px;
-    gap: 1rem;
+.social{ 
+
+    padding-left: 0px;    
     justify-content: center;
-    margin-bottom: 3rem;
+    margin: 2rem 0;
+    text-align: center;
 }
 
 .social a{
+
     text-decoration: none;    
     color: #888;
+    
 }
+
 .social li{
-    list-style: none; 
-    
+
+    list-style: none;  
    
 }
-.social-icon .fa{
-    font-size: 24px;
-}
-.social-icon .fa:hover{
-    color: var(--cl-red);
-    transition: color 0.5s;
-}
 
-.logo-face{   
-   
-    height: 85px;
-    width: 85px;   
+footer .social-icon .fa{
+    font-size: 3rem;
+}
+.social-icons .fa-instagram:hover{
+    background: radial-gradient(circle farthest-corner at 35% 100%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 10% 140%, #feda7e, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e42e66 50%, #fa5332 70%, #ffdc80 100%);
+    /* color: var(--cl-red); */
+    border-radius: 20%;      
+    transition: background-color 0.5s;
+    color: var(--cl-white);
     
-    z-index: 1;
+}
+.social-icons .fa-facebook:hover{
+    border-radius: 20%;
+    background: #3b5998;
+    transition: background-color 0.5s;
+    color: var(--cl-white);
+}
 
-    margin: 2rem auto;
+.social-icons{    
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li{
+    padding: 0 1rem;
+}
+
+
+@media screen and (min-width: 800px) {
+    
+    .footer-contact{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact{
+        text-align: start;
+    }
+    footer .social{
+        margin:0;
+    }
 }
 
 

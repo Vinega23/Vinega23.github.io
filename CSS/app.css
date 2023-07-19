@@ -2,7 +2,7 @@
     --bg-main: #1b1c20;
     --cl-yellow: #ce9700;
     --cl-red: #9b273a;
-    --cl-white: #F2F1EB;
+    --cl-white: #e4e3e3;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -54,7 +54,8 @@ section{
 h1{
     font-family: 'Poppins', sans-serif;
     color: var(--cl-white);    
-    font-size: 2.4rem;    
+    font-size: 2.4rem; 
+    text-shadow: 2px 2px 0 #000;   
     
 }
 p{
@@ -86,4 +87,9 @@ p{
 }
 strong{
     color: var(--cl-white);
+}
+
+.circle-shape{
+    background-color: #9b273a;
+    border-radius: 50%;
 }

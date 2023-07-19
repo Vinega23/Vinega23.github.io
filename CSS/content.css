@@ -8,7 +8,7 @@
     align-items: center;
 }
 .section-bio img{
-    box-shadow: 4px 4px 13px 0px #0a0a0a;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     margin: 0 auto;   
 }
 .section-bio content{
@@ -42,8 +42,8 @@
 }
 
 .art img{        
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
    
-    box-shadow: 4px 4px 13px 0px #0a0a0a;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     transition: all 0.3s ease;  
@@ -124,7 +124,7 @@ small i{
         
     }
     .line{
-        width: 25vw;
+        width: 15vw;
     }
   
 }

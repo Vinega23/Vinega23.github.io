@@ -11,7 +11,7 @@ header{
 }
 
 .dyazart-title {
-    color: #e4e3e3;
+    color: var(--cl-white);
     font-family: 'Poppins', sans-serif;
     font-size: clamp(4rem, 12vw, 8rem);    
     position: relative;    
@@ -46,6 +46,9 @@ header{
     z-index: 2;
     left: 0px;
     top: 0px;
+}
+.social-icon .fa{
+  font-size: 1rem;
 }
 .wrapped-nav{
   display: flex; 
@@ -91,7 +94,7 @@ header{
     color: var(--cl-white);    
     text-transform: uppercase;
     transition: color 0.5s;  
-    font-size: medium;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
 }
 .main-nav a:hover,
 .main-nav a:focus{
@@ -101,11 +104,11 @@ header{
   justify-content: center;
   display: flex;
   padding-left: 0px;
-  gap: 3rem;
+  gap: 2rem;
   align-items: baseline;
 
   padding-top: 1rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .menu .social li{
@@ -238,8 +241,13 @@ header{
 
   .post-menu{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
   }
-
+  .post-menu li{
+    
+  }
 
 
 }
