@@ -32,7 +32,17 @@ header{
   z-index: 1;
    
 }
+
+.red-logo-bigger{
+  display: none;
+}
+
 .red-logo a{
+  text-indent: -9999px;
+  height: 100%;
+}
+
+.red-logo-bigger a{
   text-indent: -9999px;
   height: 100%;
 }
@@ -40,7 +50,7 @@ header{
 /*NAVIGATION*/
 .main-nav {
     width: 100vw;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .6);
 
     position: fixed;
     z-index: 2;
@@ -54,22 +64,25 @@ header{
   display: flex; 
   justify-content: space-between;
   align-items: center;  
-  padding: 1rem 0;
+  padding: 0.2rem 0;
+  flex-direction: row-reverse;
 
 }
 
 .menu
 {
   position: absolute;
-    width: 100vw;
+    right: 0rem;
+    width: 60vw;
+    
     margin: -4rem 0 0 -1.3rem;
-    padding: 6rem 3rem 1rem 3rem; 
+    padding: 6rem 3rem 3rem 3rem; 
 
     background: var(--bg-main);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
+    transform: translate(100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);    
     line-height: 1;  
 
@@ -153,15 +166,12 @@ header{
   width: 40px;
   height: 32px;
   position: absolute;
-  top: 25px;
-  left: 8px;
-  
+  top: 15px;  
+  right: 13px;
+
   cursor: pointer;
-  
   opacity: 0;
   z-index: 2;
-  
-  -webkit-touch-callout: none;
 }
 
 #menuToggle span
@@ -244,11 +254,20 @@ header{
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
-  }
-  .post-menu li{
-    
+
+    margin: 0.3rem 0;
   }
 
+  .red-logo{
+    display: none;
+  }
+  .red-logo-bigger{
+    display: block;
+    background: url(../images/logo-red-bigger.png), center center no-repeat;
+    height: 90px;
+    width: 83px; 
+    z-index: 1;     
+  }
 
 }
 

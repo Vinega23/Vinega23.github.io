@@ -8,7 +8,9 @@ footer a{
 .contact{
     list-style: none;    
     padding-left: 0;
-    text-align: center;    
+    text-align: center;
+    
+    font-family: 'Poppins', sans-serif;
 }
 
 .contact li{   
@@ -55,16 +57,13 @@ footer .social-icon .fa{
 }
 .social-icons .fa-instagram:hover{
     background: radial-gradient(circle farthest-corner at 35% 100%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 10% 140%, #feda7e, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e42e66 50%, #fa5332 70%, #ffdc80 100%);
-    /* color: var(--cl-red); */
     border-radius: 20%;      
-    transition: background-color 0.5s;
     color: var(--cl-white);
     
 }
 .social-icons .fa-facebook:hover{
     border-radius: 20%;
     background: #3b5998;
-    transition: background-color 0.5s;
     color: var(--cl-white);
 }
 
@@ -85,7 +84,7 @@ footer .social-icon .fa{
         justify-content: space-between;
     }
     .contact{
-        text-align: start;
+        text-align: center;
     }
     footer .social{
         margin:0;
