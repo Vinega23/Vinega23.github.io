@@ -17,7 +17,7 @@ html {
 
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 5rem;
 }
 
 body{
@@ -89,7 +89,97 @@ strong{
     color: var(--cl-white);
 }
 
-.circle-shape{
-    background-color: #9b273a;
-    border-radius: 50%;
+
+#overlay{
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    text-align: center;
 }
+
+#overlay img{
+    margin: 2rem 0;
+    border: 5px solid #fff;
+    border-radius: 5px;    
+    height: 90vh;
+}
+
+/*GALERIE*/
+
+.galerie{
+    margin: 5rem 0;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 5rem 0;  
+}
+
+.images li {
+  height: 40vh;
+  flex-grow: 1;
+  padding: .6rem .6rem;
+}
+
+.images li:last-child { 
+  flex-grow: 10;
+}
+
+.images img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  opacity: 0.85;
+}
+
+
+h2{
+    text-align: center;
+    color: var(--cl-white);    
+    text-transform: uppercase;     
+    font-size: clamp(1.5rem, 1.7vw, 1.9rem);
+    letter-spacing: 0.1rem;      
+}
+
+.lineG{    
+    border:  2px var(--cl-yellow) solid;
+    width: 12vw;
+    margin: 0 auto;
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+  .images li {
+    height: 30vh;
+  }
+}
+
+@media (max-height: 480px) {
+  .images li {
+    height: 80vh;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .images {
+    flex-direction: row;
+  }
+
+  .images li {
+    height: auto;
+    width: 100%;
+  }
+  .images img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+  
+}
+

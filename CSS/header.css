@@ -50,7 +50,7 @@ header{
 /*NAVIGATION*/
 .main-nav {
     width: 100vw;
-    background: rgba(0, 0, 0, .6);
+    background: var(--bg-main);
 
     position: fixed;
     z-index: 2;
@@ -107,8 +107,9 @@ header{
     color: var(--cl-white);    
     text-transform: uppercase;
     transition: color 0.5s;  
-    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);    
 }
+
 .main-nav a:hover,
 .main-nav a:focus{
     color: var(--cl-yellow);}
