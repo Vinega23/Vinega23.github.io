@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./CSS/app.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
@@ -12,14 +14,78 @@
     <script src="https://kit.fontawesome.com/c5650a16ef.js" crossorigin="anonymous"></script>
 
     <style>
-        html{            
-            scroll-behavior:auto;
+        html{          
+            
+            scroll-padding-top: 10rem;
+        }
+        .main-nav a:hover,
+        .main-nav a:focus{
+        color: var(--cl-blue);
         }
     </style>
 
     <title>Galerie</title>
 </head>
 <body>
+    <nav class="main-nav">
+        <div class="container">           
+            <div class="wrapped-nav">
+                <div class="right-menu">
+
+                    <div class="social-icons">                
+                        <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+                    </div>
+
+                    <div id="menuToggle">
+                        
+                        <input type="checkbox" />
+                        
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <ul class="menu">
+                            
+                            <li><a href="./index.html">Home</a></li>                            
+                            <li><a href="#zakazka">Malba na zakázku</a></li>             
+                            <li><a href="#exhibice">Exhibice a workshop</a></li>             
+                            <li><a href="#verejny">Veřejný prostor</a></li>           
+                            
+                        </ul>
+                        
+                    </div>                   
+                    
+                </div>
+
+                <div class="red-logo">
+                    <a href="./index.html">home</a>
+                </div>                
+               
+            </div>            
+
+            <ul class="post-menu">
+
+                <li>
+                    <div class="red-logo-bigger">
+                        <a href="./index.html">home</a>
+                    </div>    
+                </li>
+
+                <li><a href="./index.html">Home</a></li>                
+                <li><a href="#zakazka">Malba na zakázku</a></li>             
+                <li><a href="#exhibice">Exhibice a workshop</a></li>             
+                <li><a href="#verejny">Veřejný prostor</a></li>    
+                <div class="social-icons">                
+                    <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+                </div>                
+
+            </ul>
+
+        </div>                            
+          
+    </nav>
     <div class="container">    
         <section id="zakazka" class="galerie">
             <h2>Malba na zakázku</h2>

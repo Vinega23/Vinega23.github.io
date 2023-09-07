@@ -3,6 +3,7 @@
     --cl-yellow: #ce9700;
     --cl-red: #9b273a;
     --cl-white: #e4e3e3;
+    --cl-blue: #53aedd;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -111,7 +112,7 @@ strong{
 /*GALERIE*/
 
 .galerie{
-    margin: 5rem 0;
+    margin: 10rem 0;
 }
 .images {
   display: flex;

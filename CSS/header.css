@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 header{
-    min-height: 90vh;
+    min-height: 70vh;
     background-image: linear-gradient(180deg, rgba(14,1,1,0) 85%, rgba(27,28,32,1) 99%),url(../images/whaleBGone.jpg);
     background-repeat: no-repeat;
     background-position: 15% 50%;
@@ -57,14 +57,15 @@ header{
     left: 0px;
     top: 0px;
 }
-.social-icon .fa{
-  font-size: 1rem;
+.post-menu .social-icon .fa{
+  font-size: 1.5rem;
+  color: var(--cl-white);
 }
 .wrapped-nav{
   display: flex; 
   justify-content: space-between;
   align-items: center;  
-  padding: 0.2rem 0;
+  padding: 0.5rem 0;
   flex-direction: row-reverse;
 
 }
@@ -135,6 +136,13 @@ header{
 
 .post-menu{
   display: none;
+}
+
+.right-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 /*HAMBURGER*/
@@ -209,7 +217,7 @@ header{
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #53aedd;
+  background:  var(--cl-blue);
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3)
@@ -256,7 +264,7 @@ header{
     align-items: center;
     padding-left: 0;
 
-    margin: 0.3rem 0;
+    margin: 1rem 0;
   }
 
   .red-logo{
