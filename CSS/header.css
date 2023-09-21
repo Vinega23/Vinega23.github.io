@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 header{
-    min-height: 70vh;
+    min-height: 80vh;
     background-image: linear-gradient(180deg, rgba(14,1,1,0) 85%, rgba(27,28,32,1) 99%),url(../images/whaleBGone.jpg);
     background-repeat: no-repeat;
     background-position: 15% 50%;
@@ -10,7 +10,7 @@ header{
     align-items: flex-end;
 }
 
-.dyazart-title {
+.dyazart-title {    
     color: var(--cl-white);
     font-family: 'Poppins', sans-serif;
     font-size: clamp(4rem, 12vw, 8rem);    
@@ -25,38 +25,35 @@ header{
     content: '.';
     color: var(--cl-yellow);
 }
-.red-logo{
-  background: url(../images/logo-red.png), center center no-repeat;
+.red-logo{  
+  z-index: 1;   
+}
+.red-logo img{
   height: 60px;
-  width: 53px; 
-  z-index: 1;
-   
+  transition: all linear .5s;
 }
 
 .red-logo-bigger{
   display: none;
 }
 
-.red-logo a{
-  text-indent: -9999px;
-  height: 100%;
-}
-
-.red-logo-bigger a{
-  text-indent: -9999px;
-  height: 100%;
-}
-
 /*NAVIGATION*/
+nav{
+  transition: 0.35s all ease;
+}
+
 .main-nav {
     width: 100vw;
-    background: var(--bg-main);
+    background: var(--bg-main);   
 
     position: fixed;
     z-index: 2;
     left: 0px;
     top: 0px;
+
+    
 }
+
 .post-menu .social-icon .fa{
   font-size: 1.5rem;
   color: var(--cl-white);
@@ -67,6 +64,7 @@ header{
   align-items: center;  
   padding: 0.5rem 0;
   flex-direction: row-reverse;
+  transition: all linear .5s;
 
 }
 
@@ -85,7 +83,10 @@ header{
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);    
-    line-height: 1;  
+    line-height: 1;
+    
+    border-radius: 3%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
 }
 
@@ -102,10 +103,8 @@ header{
 
 
 .main-nav a{
-    display: block;
-    padding: 0.35rem 0;
-
-    color: var(--cl-white);    
+    display: block;    
+    color:var(--cl-white); 
     text-transform: uppercase;
     transition: color 0.5s;  
     font-size: clamp(1.1rem, 1.3vw, 1.4rem);    
@@ -113,7 +112,9 @@ header{
 
 .main-nav a:hover,
 .main-nav a:focus{
-    color: var(--cl-yellow);}
+    color: var(--cl-yellow);
+}
+    
 
 .menu .social{
   justify-content: center;
@@ -161,6 +162,7 @@ header{
     text-transform: uppercase;
     transition: color 0.5s;  
     font-size: medium;
+    padding: 0.3rem;
 }
 
 #menuToggle a:hover,
@@ -217,7 +219,7 @@ header{
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background:  var(--cl-blue);
+  background:  var(--cl-yellow);
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3)
@@ -234,6 +236,53 @@ header{
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+/*DROPDOWN-TVORBA*/
+
+.dropdown {
+  
+  position: absolute;
+  height: auto;
+  padding: 0rem 2rem 1rem 2rem; 
+  top: 6.9rem;
+  background-color: var(--bg-main);    
+  margin-left: -2rem;  
+
+  display: none;
+}
+
+.visible{
+  display: block;  
+}
+
+#tvorba {
+  cursor: pointer;
+}
+
+/*SHRINKING MENU*/
+
+.scrolled { 
+  
+  transition: 0.35s all ease;
+  border-bottom: solid 2px #888; 
+    
+}
+
+.scrolled .red-logo-bigger img{
+  height: 70px; 
+  margin-top: 0.3rem;
+  
+}
+.scrolled .wrapped-nav{
+  padding: 0;
+}
+.scrolled .post-menu{
+  margin: 0;
+}
+.scrolled .red-logo img{
+  height: 50px;
+  margin-top: 0.3rem;
 }
 
 /*RESPONSIVE*/
@@ -264,18 +313,22 @@ header{
     align-items: center;
     padding-left: 0;
 
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+
+    transition: all linear .5s;
   }
 
   .red-logo{
     display: none;
   }
   .red-logo-bigger{
-    display: block;
-    background: url(../images/logo-red-bigger.png), center center no-repeat;
-    height: 90px;
-    width: 83px; 
+    display: block;    
     z-index: 1;     
+  }
+  .red-logo-bigger img{
+    height: 90px; 
+    transition: all linear .5s;
+
   }
 
 }

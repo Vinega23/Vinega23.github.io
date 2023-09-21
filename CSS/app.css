@@ -18,7 +18,7 @@ html {
 
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 10rem;
 }
 
 body{
@@ -47,6 +47,9 @@ a{
 
 li{
     list-style: none;
+    display: block;
+    transition-duration: 0.5s;
+    transition: 0.35s all ease;
 }
 
 section{
@@ -91,27 +94,9 @@ strong{
 }
 
 
-#overlay{
-    background: rgba(0, 0, 0, .7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    text-align: center;
-}
-
-#overlay img{
-    margin: 2rem 0;
-    border: 5px solid #fff;
-    border-radius: 5px;    
-    height: 90vh;
-}
-
 /*GALERIE*/
 
-.galerie{
+.gallery{
     margin: 10rem 0;
 }
 .images {
