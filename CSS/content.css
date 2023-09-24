@@ -9,12 +9,16 @@
 }
 .section-bio img{
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin: 0 auto;   
+    margin: 0 auto; 
 }
 .section-bio content{
     margin-top: 11rem;    
     margin-right: -8rem;    
     z-index: 1;
+    position: relative;
+    left: -100px;
+    
+    visibility: hidden;
 }
 .line{    
     border:  2px var(--cl-yellow) solid;

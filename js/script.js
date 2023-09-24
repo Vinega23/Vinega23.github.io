@@ -9,20 +9,42 @@
     
         $(this).stop().fadeTo(200, opacity)
     })
-
-    var title = $('.dyazart-title');        
-    title.hide();
-    // $('.dyazart-title')
-    // .hide()
-    // .fadeIn(3000);
-
+    
     var win = $(window);
+    
+    function scrollAndRoll(position){
+        return win.scrollTop() >= position;
+    };
+    
     win.on('scroll', function(){
-        if (win.scrollTop() >=100 ) title.fadeIn(2000); //element se objevi az po scrolovani na pozici 500
+        if (scrollAndRoll(100)) $('.arrow').fadeOut(200);
         
-    }) 
+    })
+
+    var title = $('.dyazart-title');
+        bioImg = $('.section-bio .content');      
+    title.hide();
+    
+    
+
+    
     win.on('scroll', function(){
-        if (win.scrollTop() >=100 ){
+        if (scrollAndRoll(100) ) title                   
+        .fadeIn(1500)
+        .animate({left: -6},{
+            duration: 500,
+            queue: false})       
+    })
+    win.on('scroll', function(){
+        if (scrollAndRoll(300) ) bioImg                           
+        .fadeIn(1500)
+        .animate({left: 0},{
+            duration: 500,
+            queue: false})       
+    })
+
+    win.on('scroll', function(){
+        if (scrollAndRoll(100) ){
             $('.main-nav').addClass('scrolled');         
 
         }
