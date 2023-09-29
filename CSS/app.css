@@ -18,7 +18,7 @@ html {
 
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 25rem;
 }
 
 body{
@@ -141,11 +141,10 @@ h2{
 
 /*BOUNCE ARROW*/
 .arrow {
-  text-align: center;
-  margin: 8% 0;
+  text-align: center;  
   position: absolute;
-  left: 50%;
-  bottom: 1%;
+  left: 47%;
+  bottom: 10%;
 }
 .bounce {
   -moz-animation: bounce 2s infinite;
@@ -163,6 +162,19 @@ h2{
   60% {
     transform: translateY(-15px);
   }
+}
+
+/*ANIMATIONS FADEINUP*/
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1.5s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 
@@ -193,5 +205,13 @@ h2{
     min-width: 0;
   }
   
+}
+
+@media  screen and (min-width: 900px) {
+
+  main{
+    margin: 25rem 0;
+  }
+
 }
 

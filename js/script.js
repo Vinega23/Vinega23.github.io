@@ -1,4 +1,21 @@
 (function($){                 
+    var win = $(window);
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + win.height();
+        var tags = $(".tag");
+      
+        for (var i = 0; i < tags.length; i++) {
+          var tag = tags[i];
+      
+          if ($(tag).position().top < pageBottom) {
+            $(tag).addClass("visible");
+          } 
+        //   else {
+        //     $(tag).removeClass("visible");
+        //   }
+        }
+    });
     
     var galleryOne = $('.gallery');
     startingOpacity = galleryOne.find('img').css('opacity');
@@ -10,41 +27,24 @@
         $(this).stop().fadeTo(200, opacity)
     })
     
-    var win = $(window);
     
     function scrollAndRoll(position){
         return win.scrollTop() >= position;
     };
     
     win.on('scroll', function(){
-        if (scrollAndRoll(100)) $('.arrow').fadeOut(200);
+        if (scrollAndRoll(0)) $('.arrow').fadeOut(300);
         
     })
-
     var title = $('.dyazart-title');
-        bioImg = $('.section-bio .content');      
     title.hide();
-    
-    
-
-    
     win.on('scroll', function(){
-        if (scrollAndRoll(100) ) title                   
-        .fadeIn(1500)
-        .animate({left: -6},{
-            duration: 500,
-            queue: false})       
-    })
+        if (scrollAndRoll(10)) title.fadeIn(1000);
+        
+    })        
+   
     win.on('scroll', function(){
-        if (scrollAndRoll(300) ) bioImg                           
-        .fadeIn(1500)
-        .animate({left: 0},{
-            duration: 500,
-            queue: false})       
-    })
-
-    win.on('scroll', function(){
-        if (scrollAndRoll(100) ){
+        if (scrollAndRoll(10) ){
             $('.main-nav').addClass('scrolled');         
 
         }
@@ -59,13 +59,7 @@
             spinner:true,
             captions:false
              
-    });
-
-   
-   
-        
+    });    
     
-    
-        
 })(jQuery);
 

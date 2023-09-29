@@ -6,10 +6,4 @@ Dodelat:
 	- galerie images/scrolling down
 	- main content text/h1
 
-- shrinking navigation
-- Tvorba button - hover a scrolling down + rotujici sipecka	
-
-
-
-- galerie - sipka naspod - scrolling nahoru?
-	  - upravit lightbox
+-reduce images?
