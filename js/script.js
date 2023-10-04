@@ -29,7 +29,7 @@
     function scrollAndRoll(position){
         return win.scrollTop() >= position;
     };
-    
+        
     win.on('scroll', function(){
         if (scrollAndRoll(0)) $('.arrow').fadeOut(300);
         
