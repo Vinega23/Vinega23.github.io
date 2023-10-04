@@ -10,12 +10,10 @@
       
           if ($(tag).position().top < pageBottom) {
             $(tag).addClass("visible");
-          } 
-        //   else {
-        //     $(tag).removeClass("visible");
-        //   }
+          }
+       
         }
-    });
+    });  
     
     var galleryOne = $('.gallery');
     startingOpacity = galleryOne.find('img').css('opacity');

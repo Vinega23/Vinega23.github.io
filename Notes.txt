@@ -4,6 +4,6 @@ Dodelat:
 
 - magie JS/ animation:
 	- galerie images/scrolling down
-	- main content text/h1
+	
 
 -reduce images?

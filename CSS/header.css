@@ -155,7 +155,7 @@ nav{
 {
   display: block;  
   z-index: 1;  
-  -webkit-user-select: none;
+  -webkit-user-select:none;
   user-select: none; 
   padding: 1rem 0 0.6rem 0;
 }
@@ -239,8 +239,9 @@ nav{
 
 #menuToggle input:checked ~ ul
 {
-  transform: none;
+  transform:none;
 }
+
 
 /*DROPDOWN-TVORBA*/
 
@@ -332,7 +333,7 @@ nav{
   padding: 0;
 }
 .scrolled .post-menu{
-  margin: 0;
+  margin: 0rem;
 }
 .scrolled .red-logo img{
   height: 50px;

@@ -18,7 +18,7 @@ html {
 
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
-    scroll-padding-top: 25rem;
+    scroll-padding-top: 5rem;
 }
 
 body{
@@ -172,10 +172,11 @@ h2{
   transition: all 1.5s;
 }
 
-.visible {
+.visible{
   opacity: 1;
   transform: translate(0, 0);
 }
+
 
 
 @media (max-aspect-ratio: 1/1) {
@@ -208,6 +209,10 @@ h2{
 }
 
 @media  screen and (min-width: 900px) {
+  html{
+    scroll-padding-top: 25rem;
+
+  }
 
   main{
     margin: 25rem 0;
