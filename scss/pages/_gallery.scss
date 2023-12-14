@@ -8,7 +8,7 @@
   padding-left: 0;
   margin: 5rem 0;
   li {
-    height: 40vh;
+    
     flex-grow: 1;
     padding: .6rem .6rem;
     list-style: none;
@@ -31,6 +31,14 @@
 }
 #zakazka{
   margin-top: 51vh;
+}
+@media (min-width: 400px) {  
+   
+  .images{
+    li{
+      height: 40vh;
+    }
+  }
 }
 @media (min-width: 800px) {  
    
