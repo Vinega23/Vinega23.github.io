@@ -211,7 +211,7 @@ header {
   top: 0;
   padding: 15vh 0; }
   .menu li {
-    line-height: 2; }
+    line-height: 3; }
     .menu li .social {
       justify-content: center;
       display: flex;
@@ -300,9 +300,6 @@ header {
   .red-logo-bigger img {
     height: 90px;
     transition: all linear .5s; } }
-.invisible {
-  display: none; }
-
 section p {
   font-size: 22px; }
 section h1 {
