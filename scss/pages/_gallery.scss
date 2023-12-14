@@ -1,0 +1,41 @@
+    
+.gallery{
+    margin: 10rem 0;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 5rem 0;
+  li {
+    height: 40vh;
+    flex-grow: 1;
+    padding: .6rem .6rem;
+    list-style: none;
+  }
+  li:last-child { 
+    flex-grow: 10;
+  }
+  img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    opacity: 0.85;
+  }  
+}
+.lineG{    
+    border:  2px $color-yellow solid;
+    width: 12vw;
+    margin: 0 auto;
+}
+#zakazka{
+  margin-top: 51vh;
+}
+@media (min-width: 800px) {  
+   
+#zakazka{
+  margin-top: 15vh;
+  }
+
+}

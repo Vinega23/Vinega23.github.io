@@ -1,9 +1,0 @@
-Dodelat:
-- Favicon
-- kecy na google
-
-- magie JS/ animation:
-	- galerie images/scrolling down
-	
-
--reduce images?

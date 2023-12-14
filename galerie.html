@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./CSS/app.css">
-    <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
@@ -38,7 +37,8 @@
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     
     <style>
-        html{          
+
+        html{         
             
             scroll-padding-top: 10rem;
         }
@@ -46,86 +46,98 @@
         .main-nav a:focus,
         #menuToggle ul a:hover,
         #menuToggle ul a:focus{
-        color: var(--cl-blue);
+        color:#53aedd;
         }
         #menuToggle input:checked ~ span
         {      
-        background:  var(--cl-blue);
+        background: #53aedd;
         }       
 
     </style>
-
-    <title>Galerie</title>
+    
 </head>
 <body>
+    <header>       
+            
+        <h1 class="dyazart-title container">dyaz<span class="logoLettersReds">a</span>rt</h1>       
+       
+        <div class="gradient"></div>       
+          
+    </header>
+
     <nav class="main-nav">
+        
         <div class="container">           
-            <div class="wrapped-nav">
-                <div class="right-menu">
-
-                    <div class="social-icons">                
-                        <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-                    </div>
-
+            <nav class="wrappedMenu">
+                <div class="wrapped-nav">
+                                   
                     <div id="menuToggle">
-                        
-                        <input type="checkbox" />
-                        
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        
-                        <ul class="menu">
                             
-                            <li><a href="./index.html">Home</a></li>                            
-                            <li><a href="#zakazka">Malba na zakázku</a></li>             
-                            <li><a href="#exhibice">Exhibice a workshop</a></li>             
-                            <li><a href="#verejny">Veřejný prostor</a></li>           
+                            <input id="op" type="checkbox"  />
                             
-                        </ul>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         
-                    </div>                   
-                    
-                </div>
-
-                <div class="red-logo">
-                    <a href="#"><img src="./images/logo-red.png" alt=""></a>
-                </div>                
-               
-            </div>            
-
+                          
+                            <ul class="menu">
+                                
+                                <li><a href="./index.html">Home</a></li>                                
+                                <li><a href="#zakazka">Malba na zakázku</a></li>             
+                                <li><a href="#exhibice">Exhibice a workshop</a></li>             
+                                <li><a href="#verejny">Veřejný prostor</a></li>         
+                                <li><a href="#logo">Logo</a></li>
+                                <div class="social">
+                                    <div class="social-icons">                
+                                        <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+                                    </div>
+                                </div>                                                      
+                                
+                            </ul>                    
+                        
+                    </div>        
+                </div> 
+            </nav>                      
+            
             <ul class="post-menu">
-
-                <li>
-                    <div class="red-logo-bigger">
-                        <a href="#"><img src="./images/logo-red-bigger.png" alt=""></a>
-                    </div>    
-                </li>
-
-                <li><a href="./index.html">Home</a></li>                
-                <li><a href="#zakazka">Malba na zakázku</a></li>             
-                <li><a href="#exhibice">Exhibice a workshop</a></li>             
-                <li><a href="#verejny">Veřejný prostor</a></li>    
-                <div class="social-icons">                
-                    <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-                </div>                
+              
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#bio">O mně</a></li>
+                <li class="dropdown">                     
+                    <a>Tvorba </a>  
+                    <ul class="dropdown_menu dropdown_menu--animated tvorba ">                    
+                       
+                        <li><a href="#zakazka">Malba na zakázku</a></li>             
+                        <li><a href="#exhibice">Exhibice a workshop</a></li>             
+                        <li><a href="#verejny">Veřejný prostor</a></li>          
+                                                                                
+                    </ul>
+                                      
+                </li>                          
+                <li class="active"><a href="./galerie.html" active >Galerie</a></li>
+                <li><a href="./index.html#contact">Kontakt</a></li>             
+                           
 
             </ul>
-
+            
+            
         </div>                            
-          
-    </nav>
-  
+        
+    </nav>    
+    
     <div class="container">    
+        <div class="social-icons">                
+            <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+        </div>
         <section id="zakazka" class="gallery">
             <h2>Malba na zakázku</h2>
             <div class="lineG"></div>
             <ul class="images">
                 <li>
                     <a href="./images/zakazka/int_1.jpg"  target="_blank" rel="noopener">                
-                    <img src="./images/zakazka/int_1.jpg" />
+                        <img src="./images/zakazka/int_1.jpg" />
                     </a>
                 </li>
                 <li>
@@ -261,7 +273,7 @@
                 </li>                                                                                                                                        
             </ul>
         </section>
-        <section class="gallery">
+        <section id="logo" class="gallery">
             <h2>Logo</h2>
             <div class="lineG"></div>
             <ul class="images">

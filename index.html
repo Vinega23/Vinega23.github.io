@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="cz">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/app.css">    
-    <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" href="./CSS/content.css">
-    <link rel="stylesheet" href="./CSS/footer.css">
-
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/normalize.css">    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Red+Hat+Display&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c5650a16ef.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/c5650a16ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/simple-lightbox.min.css">
     
     <meta name="title" content="Dyazart">
-    <meta name="description" content="Dyazart se zabývá malbou a designem všeho druhu a všech velikostí. Tento projekt má své kořeny v roce 2009.">
+    <meta name="description"content="Dyazart se zabývá malbou a designem všeho druhu a všech velikostí. Tento projekt má své kořeny v roce 2009.">
     <meta name="keywords" content="malba na zakázku, exhibice, workshop, design, streetart">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+    
     <title>Dyazart</title>
     
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/favicomatic/apple-touch-icon-57x57.png" />
@@ -35,71 +35,63 @@
     <link rel="icon" type="image/png" href="./images/favicomatic/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="./images/favicomatic/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="./images/favicomatic/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
+    <meta name="application-name" content="&nbsp;" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
-
-</head>
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />    
+    
+</head>   
 <body id="dyazart">
-
+    <nav class="wrappedMenu">
+        <div class="wrapped-nav">
+                           
+            <div id="menuToggle">
+                    
+                    <input id="op" type="checkbox"  />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                
+                  
+                    <ul class="menu">
+                        
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#bio">O mně</a></li>
+                        <li><a href="#zakazka">Malba na zakázku</a></li>             
+                        <li><a href="#exhibice">Exhibice a workshop</a></li>             
+                        <li><a href="#verejny">Veřejný prostor</a></li>             
+                        <li><a href="./galerie.html">Galerie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                        <div class="social">
+                            <div class="social-icons">                
+                                <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+                            </div>
+                        </div>                                                        
+                        
+                        
+                    </ul>                    
+                
+            </div>        
+        </div> 
+    </nav>                      
     <header>       
             
-        <h1 class="dyazart-title container">dyaz<span class="logoLettersReds">a</span>rt</h1>
+        <h1 class="dyazart-title container">dyaz<span class="logoLettersReds">a</span>rt</h1>       
+       
+        <div class="gradient"></div>       
           
     </header>
 
     <nav class="main-nav">
+        
         <div class="container">           
-            <div class="wrapped-nav">
-                <div class="right-menu">
-
-                    <div class="social-icons">                
-                        <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-                    </div>
-
-                    <div id="menuToggle">
-                        
-                        <input type="checkbox" />
-                        
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        
-                        <ul class="menu">
-                            
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#bio">O mně</a></li>
-                            <li><a href="#zakazka">Malba na zakázku</a></li>             
-                            <li><a href="#exhibice">Exhibice a workshop</a></li>             
-                            <li><a href="#verejny">Veřejný prostor</a></li>             
-                            <li><a href="./galerie.html">Galerie</a></li>
-                            <li><a href="#contact">Kontakt</a></li>                                                        
-                            
-                        </ul>
-                        
-                    </div>                   
-                    
-                </div>
-
-                <div class="red-logo">
-                    <a href="#"><img src="./images/logo-red.png" alt=""></a>
-                </div>                
-               
-            </div>            
-
-            <ul class="post-menu">
-
-                <li>
-                    <div class="red-logo-bigger">
-                        <a href="#"><img src="./images/logo-red-bigger.png" alt=""></a>
-                    </div>    
-                </li>
+            
+            <ul class="post-menu">               
 
                 <li><a href="#">Home</a></li>
                 <li><a href="#bio">O mně</a></li>
@@ -115,34 +107,30 @@
                                       
                 </li>                          
                 <li><a href="./galerie.html">Galerie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                
-                <div class="social-icons">                
-                    <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-                </div>                
-
-            </ul>
-
+                <li><a href="#contact">Kontakt</a></li>            
+                      
+            </ul>         
+            
         </div>                            
           
     </nav>    
 
-    <main>     
-       
-        <div class="arrow bounce">
-            <a class="fa fa-arrow-down fa-2x" href="#"></a>
-        </div>       
-        
+    <main>
+        <div class="container">   
+            <div class="social-icons">                
+                <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+            </div>
+        </div>     
         <section id="bio" class="section-bio container">       
             <div class="content">        
-                <h1 class="tag">O mně</h1>
+                <h1>O mně</h1>
                 <div class="line"></div>
-                <p class="tag">                                      
+                <p>                                      
                     Jmenuji se <strong>Vojtěch Král</strong>, jsem z Opavy a výtvarná činnost je mou celoživotní vášní. Na poli graffiti, street-art působím 20let. 
                     Oživovat prostředí, ve kterém žijeme, dát mu smysl, hravost a tvar -  to je to, proč to dělám. Miluji barvy a hlavně výzvy.                        
                 </p>
-                <p class="tag">
+                <p>
                     <strong>Dyazart.cz</strong> se zabývá malbou a designem všeho druhu a všech velikostí. 
                     Tento projekt má své kořeny v roce 2009, kdy jsem namaloval jednu z prvních zakázek. 
                     K dnešnímu dni mám na kontě desítky úspěšných realizací a vdechnul jsem život spoustě zdem.
@@ -159,25 +147,25 @@
                 <div class="box-image">                    
                     <img src="./images/dentist.jpg" alt="dentist">                    
                     
-                    <small></i><a href="./galerie.html#zakazka">galerie</a><i class="fa-solid fa-arrow-right"></i></small>
+                    <small></i><a href="./galerie.html"  target="_blank" rel="noopener">galerie</a><i class="fa-solid fa-arrow-right"></i></small>
                 </div>                                                                                                                    
                 
                 <div class="box-text">
                     <div class="box-right">
                         <div class="content">
                             
-                            <h1 class="tag">Malba na zakázku</h1>
+                            <h1>Malba na zakázku</h1>
                             
-                            <p class="tag">Vytvářím malby na zakázku, ať už se jedná o interiér nebo exteriér. Od zadání nebo nápadu přes vizualizaci, cenovou nabídku až k samotné realizaci. Od malby textu po velkoplošné muraly. 
+                            <p>Vytvářím malby na zakázku, ať už se jedná o interiér nebo exteriér. Od zadání nebo nápadu přes vizualizaci, cenovou nabídku až k samotné realizaci. Od malby textu po velkoplošné muraly. 
                                 Štětcem nebo sprejem, fantazii se meze nekladou. Na vaše přání vyzdobím originálně dětské pokojíčky, kanceláře, cluby nebo vytvořím reklamní malbu na fasádu. 
                                 Veškeré venkovní malby finálně lakuji ochrannou bezbarvou vrstvou.
                             </p>
                             
-                            <p class="tag">Dle požadavku jsem schopný vytvořit obraz na míru. 
+                            <p>Dle požadavku jsem schopný vytvořit obraz na míru. 
                                 Stačí se dohodnout na velikosti, barvě, technice a samozřejmě motivu.
                             </p>
                             
-                            <p class="tag">Dále nabízím zhotovení loga v digitální formě, které je dnes nedílnou součástí identity jak soukromníka tak společnosti.
+                            <p>Dále nabízím zhotovení loga v digitální formě, které je dnes nedílnou součástí identity jak soukromníka tak společnosti.
                                 
                             </p>
                         </div>
@@ -191,16 +179,16 @@
                 <div class="box-image">                 
                     <img src="./images/skull.jpg" alt="skull">
                     
-                   <small></i><a href="./galerie.html#exhibice">galerie</a><i class="fa-solid fa-arrow-right"></i></small>                 
+                   <small></i><a href="./galerie.html">galerie</a><i class="fa-solid fa-arrow-right"></i></small>                 
                 </div>   
                 
                 <div class="box-text">
                     <div class="box-left">
                         <div class="content">
                             
-                            <h1 class="tag">Exhibice a workshop</h1>    
+                            <h1>Exhibice a workshop</h1>    
                             
-                            <p class="tag">
+                            <p>
                                 Máte zájem udělat ve svém podniku výstavu originálních obrazů, 
                                 doprovodnou graffiti exhibici pro zaměstnance či workshop pro děti ze škol nebo z centra volného času? Stačí se ozvat.
                             </p>
@@ -215,17 +203,17 @@
                 <div class="box-image">
                     <img src="./images/bauer.jpg" alt="bauer">
 
-                    <small></i><a href="./galerie.html#verejny">galerie</a><i class="fa-solid fa-arrow-right"></i></small> 
+                    <small></i><a href="./galerie.html">galerie</a><i class="fa-solid fa-arrow-right"></i></small> 
                 </div>
                 <div class="box-text">
                     <div class="box-right">
                         <div class="content">
                             
-                            <h1 class="tag">Veřejný prostor</h1>
+                            <h1>Veřejný prostor</h1>
                             
-                            <p class="tag">Úzce spolupracuji s Magistrátem města Opavy na téma vyhledávání nových legálních graffiti ploch. Ty slouží pro realizaci začínajících výtvarníků, a eliminují tak ničení veřejného prostoru.</p>
+                            <p>Úzce spolupracuji s Magistrátem města Opavy na téma vyhledávání nových legálních graffiti ploch. Ty slouží pro realizaci začínajících výtvarníků, a eliminují tak ničení veřejného prostoru.</p>
                             
-                            <p class="tag">Pokud jste soukromým vlastníkem betonového, plechového oplocení, garáže nebo jiné plochy, nabízím možnost jednorázové autorské malby.
+                            <p>Pokud jste soukromým vlastníkem betonového, plechového oplocení, garáže nebo jiné plochy, nabízím možnost jednorázové autorské malby.
                                 Zdi v okolí vašeho bydliště už nemusí být jen šedé a prostor kolem pouhou platformou pro cestu do práce. Můžou rozzářit celé okolí, a výrazně tak zlepšit život a prostředí okolo nás.
                             </p>
                             
@@ -256,7 +244,10 @@
                     <div class="social-icons">                
                         <li><a href="https://www.instagram.com/dyas.17/" class="social-icon"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="https://www.facebook.com/vojtech.kral.399" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-                    </div>                
+                    </div>
+                    <div class="red-logo-bigger">
+                        <a href="#"><img src="./images/logo-red-bigger.png" alt=""></a>
+                    </div>                 
                 </ul>           
 
             </div>            
@@ -266,7 +257,8 @@
     </footer>    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="js/script.js"></script> 
+    <script src="./js/simple-lightbox.jquery.min.js"></script>
+    <script src="js/script.js"></script>
     
 </body>
 </html>

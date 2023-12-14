@@ -1,26 +1,41 @@
-/*SECTIONS*/
-
+//
+// SECTIONS
+//---------------------
+section{
+    p{
+        font-size: 22px;
+        
+    }
+    h1{
+        font-size: 2.4rem;
+    }
+}
 .section-bio{     
-    margin: 0 auto;
+    margin: 45vh auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    img{
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        margin: 0 auto;      
+    }
+    p{
+        text-align: start;
+    }
+    h1{
+        text-align: left;
+    }
     
-}
-.section-bio img{
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin: 0 auto;      
 }
 
 .line{    
-    border:  2px var(--cl-yellow) solid;
+    border:  2px $color-yellow solid;
     width: 50vw;    
 }
-.section-bio p{
-    text-align: start;
-}
 
-/*CONTENT*/
+//
+// CONTENT
+//---------------------
 
 .art{
 
@@ -29,6 +44,22 @@
     flex-direction: column-reverse;
     gap: 4rem;  
     text-align: center;
+    img{        
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+       
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        transition: all 0.3s ease;  
+        margin: 0 auto;
+                     
+    }
+    img:hover,
+    img:active{
+    filter: none;
+    -webkit-filter: grayscale(0);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
    
 }
 
@@ -37,27 +68,8 @@
     z-index: 1;
 }
 
-.art img{        
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-   
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    transition: all 0.3s ease;  
-    margin: 0 auto;
-                 
-}
-
-
-.art img:hover,
-.art img:active{
-    filter: none;
-    -webkit-filter: grayscale(0);
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
 .box-right{   
-    border-right: var(--cl-yellow) solid 4px;
+    border-right: $color-yellow solid 4px;
     background-image: linear-gradient(#ce9700, #ce9700),
                     linear-gradient(#ce9700, #ce9700),
                     linear-gradient(#1b1c20, #1b1c20);
@@ -81,36 +93,39 @@ small{
     text-transform: uppercase;
 
     font-size: 1rem;
-    color: var(--cl-red);
-}
-
-small i{    
-    margin-right: 10px;
-    margin-left: 5px;
-
+    color: $color-red;
+    i{    
+        margin-right: 10px;
+        margin-left: 5px;
+        text-shadow: 0 0 10px $color-red;
+    
+    }
+    a{
+        color: $color-red;
+        text-shadow: 0 0 10px $color-red; 
+    }
 }
 
 .box-left{      
-    border-left: var(--cl-yellow) 4px solid;  
+    border-left: $color-yellow 4px solid;  
     background-image: linear-gradient(#ce9700, #ce9700),
                     linear-gradient(#ce9700, #ce9700),
                     linear-gradient(#1b1c20, #1b1c20);
     background-repeat: no-repeat;
     background-size: 50% 4px, 50% 4px, calc(100% - 8px) 100%;
-    background-position: left bottom, left top, 4px 4px;  
+    background-position: left bottom, left top, 4px 4px;
+    .content{
+        padding-left: 2rem;
+    }  
 }
-.box-left .content{
-    padding-left: 2rem;
-}
+ 
 
-
-/*responsive*/
-
-@media screen and (min-width: 800px) {  
+@media (min-width: 800px) {  
    
     .section-bio{
         flex-direction: row;       
-
+        margin-top: 20vh;
+        margin-bottom: 20vh;
     }
     .section-bio .content{
         flex: 2;        
@@ -126,7 +141,7 @@ small i{
   
 }
 
-@media  screen and (min-width: 900px) {
+@media  (min-width: 900px) {
     .art{
         margin: 20rem 0;
         flex-direction: row;                
@@ -152,7 +167,7 @@ small i{
     }
 }
 
-@media  screen and (min-width: 1000px) {
+@media  (min-width: 1000px) {
 
     .section-bio .content{
         flex: 2;
@@ -166,6 +181,3 @@ small i{
     }
  
 }
-
-
-
