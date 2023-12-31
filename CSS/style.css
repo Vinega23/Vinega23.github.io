@@ -505,11 +505,21 @@ footer {
 #zakazka {
   margin-top: 51vh; }
 
+.smallGallery {
+  font-size: 80%;
+  top: 1rem;
+  left: 4rem;
+  position: relative;
+  text-shadow: 0 0 10px #9b273a; }
+
 @media (min-width: 400px) {
   .images li {
     height: 40vh; } }
 @media (min-width: 800px) {
   #zakazka {
-    margin-top: 15vh; } }
+    margin-top: 15vh; }
+
+  .smallGallery {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
