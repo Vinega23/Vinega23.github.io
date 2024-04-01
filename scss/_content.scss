@@ -1,183 +1,167 @@
 //
 // SECTIONS
 //---------------------
-section{
-    p{
-        font-size: 22px;
-        
-    }
-    h1{
-        font-size: 2.4rem;
-    }
+section {
+  p {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
 }
-.section-bio{     
-    margin: 45vh auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img{
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        margin: 0 auto;      
-    }
-    p{
-        text-align: start;
-    }
-    h1{
-        text-align: left;
-    }
-    
+.section-bio {
+  margin: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    box-shadow: $img-shadow;
+    margin: 0 auto;
+  }
+  p {
+    text-align: start;
+  }
+  h1 {
+    text-align: left;
+  }
 }
 
-.line{    
-    border:  2px $color-yellow solid;
-    width: 50vw;    
+.line {
+  border: 2px $color-yellow solid;
+  width: 50vw;
 }
 
 //
 // CONTENT
 //---------------------
 
-.art{
+.art {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
+  text-align: center;
+  img {
+    box-shadow:$img-shadow;
 
-    margin: 10rem 0;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 4rem;  
-    text-align: center;
-    img{        
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-       
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        transition: all 0.3s ease;  
-        margin: 0 auto;
-                     
-    }
-    img:hover,
-    img:active{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: all 0.3s ease;
+    margin: 0 auto;
+  }
+  img:hover,
+  img:active {
     filter: none;
     -webkit-filter: grayscale(0);
     transition: all 0.3s ease;
     z-index: 1;
-}
-   
-}
-
-.content{
-    padding: 1rem 1rem 1rem 0rem;
-    z-index: 1;
+  }
 }
 
-.box-right{   
-    border-right: $color-yellow solid 4px;
-    background-image: linear-gradient(#ce9700, #ce9700),
-                    linear-gradient(#ce9700, #ce9700),
-                    linear-gradient(#1b1c20, #1b1c20);
-    background-repeat: no-repeat;
-    background-size: 50% 4px, 50% 4px, calc(100% - 8px) 100%;
-    background-position: right bottom, right top, 4px 4px;  
+.content {
+  padding: 1rem 1rem 1rem 0rem;
+  z-index: 1;
 }
 
-.box-text .p{
-    padding: 3rem 4rem 3rem 0;
-}
-.box-image{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+.box-right {
+  border-right: $color-yellow solid 4px;
+  background-image: linear-gradient(#ce9700, #ce9700),
+    linear-gradient(#ce9700, #ce9700), linear-gradient(#1b1c20, #1b1c20);
+  background-repeat: no-repeat;
+  background-size: 50% 4px, 50% 4px, calc(100% - 8px) 100%;
+  background-position: right bottom, right top, 4px 4px;
 }
 
-small{
-    position: relative;     
-    text-transform: uppercase;
+.box-text .p {
+  padding: 3rem 4rem 3rem 0;
+}
+.box-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
-    font-size: 1rem;
+small {
+  position: relative;
+  text-transform: uppercase;
+
+  font-size: 1rem;
+  color: $color-red;
+  i {
+    margin-right: 10px;
+    margin-left: 5px;
+    text-shadow: 0 0 10px $color-red;
+  }
+  a {
     color: $color-red;
-    i{    
-        margin-right: 10px;
-        margin-left: 5px;
-        text-shadow: 0 0 10px $color-red;
-    
-    }
-    a{
-        color: $color-red;
-        text-shadow: 0 0 10px $color-red; 
-    }
+    text-shadow: 0 0 10px $color-red;
+  }
 }
 
-.box-left{      
-    border-left: $color-yellow 4px solid;  
-    background-image: linear-gradient(#ce9700, #ce9700),
-                    linear-gradient(#ce9700, #ce9700),
-                    linear-gradient(#1b1c20, #1b1c20);
-    background-repeat: no-repeat;
-    background-size: 50% 4px, 50% 4px, calc(100% - 8px) 100%;
-    background-position: left bottom, left top, 4px 4px;
-    .content{
-        padding-left: 2rem;
-    }  
-}
- 
-
-@media (min-width: 800px) {  
-   
-    .section-bio{
-        flex-direction: row;       
-        margin-top: 20vh;
-        margin-bottom: 20vh;
-    }
-    .section-bio .content{
-        flex: 2;        
-    }
-    .section-bio img{
-        flex: 1;        
-        margin-left: -8rem;
-        
-    }
-    .line{
-        width: 15vw;
-    }
-  
+.box-left {
+  border-left: $color-yellow 4px solid;
+  background-image: linear-gradient(#ce9700, #ce9700),
+    linear-gradient(#ce9700, #ce9700), linear-gradient(#1b1c20, #1b1c20);
+  background-repeat: no-repeat;
+  background-size: 50% 4px, 50% 4px, calc(100% - 8px) 100%;
+  background-position: left bottom, left top, 4px 4px;
+  .content {
+    padding-left: 2rem;
+  }
 }
 
-@media  (min-width: 900px) {
-    .art{
-        margin: 20rem 0;
-        flex-direction: row;                
-        align-items: center;
-       
-    }
-    .box-text{
-        flex:2;
-    }
-    .box-image{
-        flex: 1;
-    }
-
-    #exhibice{
-        flex-direction: row-reverse;
-    }
-
-    .art .content{
-        padding-right: 2rem;
-    }
-    .box-left .content {
-        padding-right: 0;
-    }
+@media (min-width: 800px) {
+  .section-bio {
+    flex-direction: row;
+    margin-top: 20vh;    
+  }
+  .section-bio .content {
+    flex: 2;
+  }
+  .section-bio img {
+    flex: 1;
+    margin-left: -8rem;
+  }
+  .line {
+    width: 15vw;
+  }
 }
 
-@media  (min-width: 1000px) {
+@media (min-width: 900px) {
+  .art {
+    flex-direction: row;
+    align-items: center;
+    margin: 10rem 0;
+  }
+  .box-text {
+    flex: 2;
+  }
+  .box-image {
+    flex: 1;
+  }
 
-    .section-bio .content{
-        flex: 2;
-        padding-left: 0rem;
-        margin-left: 5rem;      
-    }
-    .section-bio img{
-        flex: 1;        
-        margin-left: -8rem;
-        margin-right: 5rem;
-    }
- 
+  #exhibice {
+    flex-direction: row-reverse;
+  }
+
+  .art .content {
+    padding-right: 2rem;
+  }
+  .box-left .content {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section-bio .content {
+    flex: 2;
+    padding-left: 0rem;
+    margin-left: 5rem;
+  }
+  .section-bio img {
+    flex: 1;
+    margin-left: -8rem;
+    margin-right: 5rem;
+  }
 }

@@ -2,81 +2,72 @@
 // FOOTER
 //---------------------
 
-
 footer {
-    border-top: 2px solid;
+  border-top: 2px solid;
 
-    a {
-        color: $color-text;
-    }
-   
+  a {
+    color: $color-text;
+    padding-left: 0.3rem;
+  } 
 }
 
 .contact {
-    list-style: none;
-    padding-left: 0;    
-    font-family: $font-family-serif;
-    margin: 2rem 0;    
+  list-style: none;
+  padding-left: 0;
+  font-family: $font-family-coolvetica;
+  margin: 5rem 0;
 
-    li {
-        font-size: 1.7rem;      
-        padding-bottom: 1.5rem;
-    }
+  li {
+    font-size: 1.7rem;
+    padding-bottom: 1.5rem;
+  }
 
-    h1 {
-        margin: 0;
-        font-size: 2rem;
-    }
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
 
-    li a:hover,
-    li a:active {
-        color: $color-red;
-        transition: color 0.5s;
-
-    }   
+  li a:hover,
+  li a:active {
+    color: $color-red;
+    transition: color 0.5s;
+  }
 }
 
-.social {    
-    padding-left: 0px;
+.social {
+  padding-left: 0px;
+  justify-content: center;
+  margin: 5rem 0;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: #888;
+  }
+
+  li {
+    list-style: none;
+  }
+  .social-icons {
+    display: flex;
     justify-content: center;
-    margin: 2rem 0;
-    text-align: center;
-
-    a {
-
-        text-decoration: none;
-        color: #888;
-
+    margin-top: 2rem;
+  }
+  .social-icon {
+    .fa {
+      font-size: 3rem;
     }
-
-    li {
-
-        list-style: none;
-
-    }
-    .social-icons{
-        display: flex;
-        justify-content: center;
-        margin: 1rem;
-        gap: 1rem;       
-    }
-    .social-icon {
-        .fa {
-            font-size: 3rem;
-        }   
-    }
-    h1{
-        margin: 0;
-    }
+  }
+  h1 {
+    margin: 0;
+  }
 }
 @media (min-width: 800px) {
-    
-    .footer-contact{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .contact{
-        text-align: center;
-    }
-   
+  .footer-contact {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .contact {
+    text-align: center;
+  }
 }

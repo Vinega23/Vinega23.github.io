@@ -1,6 +1,6 @@
     
 .gallery{
-    margin: 10rem 0;
+  margin-bottom: 0;
 }
 .images {
   display: flex;
@@ -10,7 +10,7 @@
   li {
     
     flex-grow: 1;
-    padding: .6rem .6rem;
+    padding: .3rem .3rem;
     list-style: none;
   }
   li:last-child { 
@@ -24,21 +24,10 @@
     opacity: 0.85;
   }  
 }
-.lineG{    
-    border:  2px $color-yellow solid;
-    width: 12vw;
-    margin: 0 auto;
+.galleryTypo{
+  margin-top: 7rem;
 }
-#zakazka{
-  margin-top: 51vh;
-}
-.smallGallery{  
-    font-size: 80%;  
-    top: 1rem;
-    left: 4rem;
-    position: relative;
-    text-shadow: 0 0 10px $color-red;       
-}
+
 
 @media (min-width: 400px) {  
    
@@ -48,13 +37,13 @@
     }
   }
 }
-@media (min-width: 800px) {  
-   
-#zakazka{
-  margin-top: 15vh;
+@media (min-width: 900px) {
+  .galleryTypo{
+    margin-top: 8rem;
   }
-.smallGallery{
-  display: none;
-}
+  .main-nav{
+    top: 0;
+  }
+
 
 }

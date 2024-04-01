@@ -2,81 +2,101 @@
 // NAVIGATION
 //---------------------
 
+.main-nav {
+  transition: 0.35s all ease;
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(27, 28, 32, 0.5);
+  backdrop-filter: blur(3px);
+  width: 100vw;
 
-.main-nav { 
-    
-    transition: 0.35s all ease;
-    a {
-      display: block;
-      color: $color-text;
-      text-transform: uppercase;
-      transition: color 0.5s;
-      font-size: clamp(1.2rem, 1.4vw, 1.4rem);
-      font-weight: bold;
-      letter-spacing: 0.2rem;      
-      padding: 1rem 0;       
-    }
+  a {
+    display: block;
+    color: $color-white;
+    transition: color 0.5s;
 
-    a:hover,
-    a:focus {
-        color: $color-yellow;        
-    }  
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+    text-transform: uppercase;
 
+    letter-spacing: 0.2rem;
+  }
+
+  a:hover,
+  a:focus {
+    color: $color-yellow;
+  }
 }
 
 .post-menu {
-    display: none;
-    list-style: none;
+  display: none;
+  list-style: none;
 }
-.active a{    
+.active a {
   color: $color-blue;
-}   
+}
+.red-logo {
+  margin: 0 1rem;
+  background-color: rgba($color-bg-body, 0.7);
 
+  img {
+    height: 90px;
+    width: 83px;
+    transition: all linear 0.5s;
+  }
+}
+.right-side {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 //DROPDOWN-TVORBA
 
-.dropdown {  
+.dropdown {
   padding: 2.2rem 0;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  position: relative;  
+  align-items: center;
+  position: relative;
   perspective: 1000px;
   z-index: 100;
-  &:hover{  
+
+  &:hover,
+  &:active {
     cursor: pointer;
   }
-  &:hover .dropdown_menu li{
+  &:hover .dropdown_menu li,
+  &:active .dropdown_menu li {
     display: block;
-  }  
+  }
 }
 
-.dropdown_menu{
+.dropdown_menu {
   position: absolute;
   top: 50%;
-  
-  perspective: 1000px;
-  z-index: -1; 
+  left: -50%;
 
+  perspective: 1000px;
+  z-index: -1;
+  margin: -4rem 0 0 -1.3rem;
+  padding: 6rem 3rem 3rem 3rem;
+
+  background: #fff;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
 
-  margin: 2rem 0rem;
-  padding: 0;
-  
-  li a{
-    
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+  li a {
+    color: var(--bg-main);
     line-height: 1.5;
     text-align: center;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     padding: 1rem 0;
-    
-  } 
-  
+  }
 }
 
-.dropdown_menu--animated{
+.dropdown_menu--animated {
   display: none;
 }
 
@@ -85,181 +105,164 @@
   transform-origin: top center;
 }
 
-.dropdown:hover .dropdown_menu--animated{
-  display: block
+.dropdown:hover .dropdown_menu--animated,
+.dropdown:focus .dropdown_menu--animated {
+  display: block;
+}
+
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
 }
 
 //WRAPPED MENU
-.wrappedMenu{
-  width: 100vw;  
+.wrappedMenu {
+  width: 100vw;
   position: fixed;
   z-index: 2;
   left: 0px;
   top: 0px;
-} 
+}
 .wrapped-nav {
-    
-  display: flex;   
-  padding: 0.5rem 0;
+  display: flex;
   flex-direction: row-reverse;
-  transition: all linear .5s;
-    
+  transition: all linear 0.5s;
+  background-color: rgba(27, 28, 32, 0.5);
+  backdrop-filter: blur(3px);
+  justify-content: space-between;
 }
 
 .menu {
-
   position: fixed;
   right: 0rem;
   width: 100%;
-  height: 100%;
-  background: $color-bg-body;
+  height: 100vh;
+
+  background-color: rgba($color-bg-body, 0.95);
+  backdrop-filter: blur(5px);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);    
-  line-height: 1; 
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  line-height: 1;
   top: 0;
   padding: 15vh 0;
- 
-    li {
-        line-height: 3;
-        
-        .social {
-            justify-content: center;
-            display: flex;
-            padding-left: 0px;
-            gap: 2rem;
-            align-items: baseline;
-    
-            padding-top: 1rem;
-            margin: 0;           
-          } 
-        }
+
+  li {
+    line-height: 3;
+    letter-spacing: 2px;
+  }
 }
 
 //
 // HAMBURGER
 //---------------------
 
-#menuToggle
-{
-  display: block;  
-  z-index: 1;  
-  -webkit-user-select:none;
-  user-select: none; 
+#menuToggle {
+  display: block;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
   padding: 1rem 1rem 0.6rem 0;
-  .social-icon {
-    .fa {
-        font-size: 2rem;
-    }     
+  margin: 1.2rem 0.2rem;
+  a {
+    color: $color-white;
+    text-transform: uppercase;
+    transition: color 0.5s;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    padding: 0.3rem;
   }
-  a
-    {
-      color: $color-white;    
-      text-transform: uppercase;
-      transition: color 0.5s;  
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
-      padding: 0.3rem;
-      font-weight: bold;
-    }
   a:hover,
-  a:focus{
-        color: $color-yellow;
-    }
-  input
-    {
-      display: block;
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      top: 8px;  
-      right: 13px;    
-      cursor: pointer;
-      opacity: 0;
-      z-index: 100;
-    }
-  span
-    {
-      display: block;
-      width: 33px;
-      height: 4px;
-      margin-bottom: 5px;
-      position: relative;
-      
-      background: $color-white;
-      border-radius: 3px;
-      
-      z-index: 1;
-      
-      transform-origin: 4px 0px;
-      
-      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                  opacity 0.55s ease;
-    }
-  span:first-child
-    {
-      transform-origin: 0% 0%;
-    }
-  span:nth-last-child(2)
-    {
-      transform-origin: 0% 100%;
-    }
-  input:checked ~ span
-    {
-      opacity: 1;
-      transform: rotate(45deg) translate(-2px, -1px);
-      background:  $color-yellow;
-      z-index: 2;
-    }
-  input:checked ~ span:nth-last-child(3)
-    {
-      opacity: 0;
-      transform: rotate(0deg) scale(0.2, 0.2);
-    }
-  input:checked ~ span:nth-last-child(2)
-    {
-      transform: rotate(-45deg) translate(0, -1px);
-    }
-  input:checked ~ ul
-    {
-      transform:none;
-    }
+  a:focus {
+    color: $color-yellow;
+  }
+  input {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 100;
+  }
+  span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: $color-white;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+  span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: $color-yellow;
+    z-index: 2;
+  }
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  input:checked ~ ul {
+    transform: none;
+  }
 }
 
 //
 // RESPONSIVE
 //---------------------
 
-@media (min-width: 800px){
-
-  .wrapped-nav{
-    display: none;     
-  }
-
-  .post-menu{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;    
-    margin: 5.5rem 0;
-    transition: all linear .5s;
-    
-  }
-
-  .red-logo{
+@media (min-width: 900px) {
+  .wrapped-nav {
     display: none;
   }
-  .red-logo-bigger{
-    display: block;    
-    z-index: 1;
-    position: relative;
-    top: 0.2rem;     
-  }
-  .red-logo-bigger img{
-    height: 90px; 
-    transition: all linear .5s;
 
+  .post-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    transition: all linear 0.5s;
+    padding: 0;
+    .li {
+      padding: 0 0;
+    }
+    .social-icons {
+      margin: 0;
+      a:hover,
+      a:focus {
+        color: $color-white;
+        transition: color 0s;
+      }
+    }
   }
-
 }
+
