@@ -22,19 +22,33 @@
     captions: false,
   });
   // ===== Scroll to Top ====
+  var btn = $("#button");
+
   $(window).scroll(function () {
-    if ($(this).scrollTop() >= 200) {
-      $("#return-to-top").fadeIn(250);
+    if ($(window).scrollTop() > 300) {
+      btn.addClass("show");
     } else {
-      $("#return-to-top").fadeOut(250);
+      btn.removeClass("show");
     }
   });
-  $("#return-to-top").click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
+
+  btn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
   });
+  // ===== Gallery buttons ====
+  
+  $(".filterSections").click(function(){
+    var articleId = $(this).data("article-id");
+    if(articleId === "*"){
+      $(".article").fadeIn();
+      $(".filterSections").removeClass("active");
+      $(this).addClass("active");
+    }else{
+    $(".article").hide(); 
+    $("#" + articleId).fadeIn();
+    $(".filterSections").removeClass("active");        
+    $(this).addClass("active");
+    }
+});
 })(jQuery);

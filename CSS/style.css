@@ -95,55 +95,52 @@ strong {
   font-family: "Coolvetica", sans-serif;
   font-size: clamp(5rem, 15vw, 10rem);
   margin: 1rem 0 0 0;
+  letter-spacing: -1px;
 }
 
 .under-title {
   font-size: 16px;
   margin-top: 6vh 0;
+  letter-spacing: 1px;
 }
 
-#return-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.7);
+#button {
+  display: inline-block;
+  background-color: #53aedd;
   width: 50px;
   height: 50px;
-  display: block;
-  text-decoration: none;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
-  display: none;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  z-index: 2;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
 }
 
-#return-to-top i {
-  color: #e4e3e3;
-  margin: 0;
-  position: relative;
-  top: 11px;
-  font-size: 25px;
-  -webkit-transition: all 0.1s ease;
-  -moz-transition: all 0.1s ease;
-  -ms-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
 }
 
-#return-to-top:hover {
-  background: rgba(0, 0, 0, 0.9);
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
 }
 
-#return-to-top:hover i {
-  color: #e4e3e3;
-  top: 5px;
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (min-width: 1900px) {
@@ -685,7 +682,7 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
-  margin: 5rem 0;
+  margin: 0;
 }
 .images li {
   flex-grow: 1;
@@ -704,7 +701,29 @@ footer a {
 }
 
 .galleryTypo {
-  margin-top: 7rem;
+  margin: 8rem 0 0 0;
+}
+
+.imagesFilterButtons {
+  margin: 4rem 0;
+  display: flow-root;
+}
+.imagesFilterButtons button {
+  background-color: #e4e3e3;
+  cursor: pointer;
+  border: none;
+  padding-bottom: 0.2rem;
+  margin-top: 4px;
+}
+.imagesFilterButtons button:hover {
+  background-color: #b3b2b2;
+}
+.imagesFilterButtons .active {
+  background-color: #b3b2b2;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 400px) {
